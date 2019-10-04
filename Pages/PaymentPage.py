@@ -1,5 +1,6 @@
 import time
 from selenium.webdriver.support.select import Select
+from Utils import Utils
 
 
 class Payment():
@@ -19,8 +20,8 @@ class Payment():
         self.driver.execute_script("window.scrollTo(0, 400);")
         self.driver.find_element_by_id(self.CreditCardRadioBtn_id).click()
         self.driver.find_element_by_xpath(self.PaymentContinueBTN_xpath).click()
-        self.driver.find_element_by_id(self.CardHolderName_id).send_keys("Alok Srivastava")
-        self.driver.find_element_by_id(self.CardNumber_id).send_keys("6331101999990016")
+        self.driver.find_element_by_id(self.CardHolderName_id).send_keys(Utils.CardHolderName)
+        self.driver.find_element_by_id(self.CardNumber_id).send_keys(Utils.CardNo)
         WebElement_Month = self.driver.find_element_by_xpath(self.ExpirationMonth_xpath)
 
         select_Expdate = Select(WebElement_Month)
@@ -28,6 +29,6 @@ class Payment():
         WebElement_Year = self.driver.find_element_by_xpath(self.ExpirationYear_xpath)
         select_ExpYear = Select(WebElement_Year)
         select_ExpYear.select_by_index(5)
-        self.driver.find_element_by_xpath(self.CVV_xpath).send_keys("123")
+        self.driver.find_element_by_xpath(self.CVV_xpath).send_keys(Utils.cvv)
         self.driver.find_element_by_xpath(self.Card_ContinueBTN_xpath).click()
         time.sleep(4)
