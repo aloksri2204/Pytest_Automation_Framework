@@ -33,7 +33,7 @@ class Address():
     def AddressInput(self):
         self.driver.find_element_by_id(self.FirstName_id).send_keys(Utils.First_Name)
         self.driver.find_element_by_id(self.LastName_id).send_keys(Utils.Last_Name)
-        self.driver.execute_script("window.scrollTo(0, 300);")
+        self.driver.execute_script("window.scrollTo(0, 200);")
         self.driver.find_element_by_id(self.Email_id).send_keys(Utils.Email)
         self.SelectCountry()
         self.driver.find_element_by_id(self.City_id).send_keys(Utils.City)

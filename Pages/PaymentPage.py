@@ -17,7 +17,7 @@ class Payment():
         self.Card_ContinueBTN_xpath = "//input[@class='button-1 payment-info-next-step-button']"
 
     def PaymentOptions(self):
-        self.driver.execute_script("window.scrollTo(0, 400);")
+        self.driver.execute_script("window.scrollTo(0, 200);")
         self.driver.find_element_by_id(self.CreditCardRadioBtn_id).click()
         self.driver.find_element_by_xpath(self.PaymentContinueBTN_xpath).click()
         self.driver.find_element_by_id(self.CardHolderName_id).send_keys(Utils.CardHolderName)
