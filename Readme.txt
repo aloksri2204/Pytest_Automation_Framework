@@ -1,2 +1,1 @@
-Hello this is Pytest Automation Framework 
-with lambda function 
+Hello this is Pytest Automation Framework
