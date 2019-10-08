@@ -4,7 +4,7 @@ from Utils import Utils
 from Utils.snapshot import snapshot
 from Pages.CartPage import CartPage
 from Pages.HomePage import HomePage
-from Pages.CellPhonePage import CellPhonePage
+from Pages.Electronics_CellPhonePage import CellPhonePage
 from Pages.LoginPage import LoginPage
 from Pages.CheckOutPage import CheckOut
 from Pages.AddressPage import Address
@@ -13,7 +13,7 @@ from Pages.OrderConfirmationPage import OrderConfirmation
 
 
 @pytest.mark.usefixtures("test_setup")
-class Test_login():
+class Test_PhonePurchaseNewCustomer():
 
     def test_HomePage(self):
         driver = self.driver
@@ -40,21 +40,14 @@ class Test_login():
     def test_Login(self):
         driver = self.driver
         loginObj = LoginPage(driver)
-        loginObj.Login()
-        snapObj = snapshot(driver)
-        snapObj.screenshot()
-
-    def test_Checkout(self):
-        driver = self.driver
-        checkoutObj = CheckOut(driver)
-        checkoutObj.Check_out()
+        loginObj.Checkout_as_Guest()
         snapObj = snapshot(driver)
         snapObj.screenshot()
 
     def test_Address(self):
         driver = self.driver
         addressObj = Address(driver)
-        addressObj.continueAddress()
+        addressObj.AddressInput()
         snapObj = snapshot(driver)
         snapObj.screenshot()
 

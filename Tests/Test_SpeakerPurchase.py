@@ -4,7 +4,7 @@ from Utils import Utils
 from Utils.snapshot import snapshot
 from Pages.CartPage import CartPage
 from Pages.HomePage import HomePage
-from Pages.CellPhonePage import CellPhonePage
+from Pages.Electronics_OthersPage import OtherItems
 from Pages.LoginPage import LoginPage
 from Pages.CheckOutPage import CheckOut
 from Pages.AddressPage import Address
@@ -13,20 +13,20 @@ from Pages.OrderConfirmationPage import OrderConfirmation
 
 
 @pytest.mark.usefixtures("test_setup")
-class Test_tc2():
+class Test_SpeakerPurchase():
 
     def test_HomePage(self):
         driver = self.driver
         driver.get(Utils.URL)
         homeObj = HomePage(driver)
-        homeObj.NavigateToCellPhone()
+        homeObj.NavigateToOthers()
         snapObj = snapshot(driver)
         snapObj.screenshot()
 
-    def test_Phone_buy(self):
+    def test_Speaker_buy(self):
         driver = self.driver
-        cellObj = CellPhonePage(driver)
-        cellObj.SelectPhone()
+        cellObj = OtherItems(driver)
+        cellObj.SelectSpeakers()
         snapObj = snapshot(driver)
         snapObj.screenshot()
 

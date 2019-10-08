@@ -7,7 +7,6 @@ class CheckOut():
 
         self.termsAndConditions_id = "termsofservice"
         self.CheckOutButton_xpath = "//button[@id='checkout']"
-        
 
     def Check_out(self):
         time.sleep(3)

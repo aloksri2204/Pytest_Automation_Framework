@@ -14,5 +14,5 @@ class OrderConfirmation():
         OrderNo = self.driver.find_element_by_xpath(self.OrderNo_xpath).text
         print(OrderNo)
         text_file = open('C:/files/file.txt', 'a')
-        text_file.writelines(OrderNo)
+        text_file.writelines("/n"+ OrderNo)
         text_file.close()
