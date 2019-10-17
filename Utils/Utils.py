@@ -1,8 +1,10 @@
 import inspect
+
 # URL & Log In details
 URL = "https://demo.nopcommerce.com/"
 Email = "aloksri2204@gmail.com"
 Password = "Test123"
+
 
 # WhoAmI function returns the name of function called
 def whoami():
@@ -15,10 +17,12 @@ CardNo = "6331101999990016"
 cvv = "123"
 
 # Address details
-First_Name = "Alok"
-Last_Name = "Srivastava"
-Guest_Email = "abc@gmail.com"
-City = "Pune"
-Address1 = "Kharadi"
-PostCode = "411014"
-PhoneNo = "9415862204"
+
+dict_address = {'First_Name': "Alok",
+                'Last_Name': "Srivastava",
+                'Guest_Email': "abc@gmail.com",
+                'City': "Pune",
+                'Address1': "Kharadi",
+                'PostCode': "411014",
+                'PhoneNo': "9415862204"
+                }

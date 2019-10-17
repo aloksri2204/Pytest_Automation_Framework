@@ -15,7 +15,7 @@ class OtherItems:
     def SelectSpeakers(self):
         self.driver.find_element_by_partial_link_text(self.SoundSpeakers_Linktxt).click()
         self.driver.execute_script("window.scrollTo(0, 400);")
-        time.sleep(3)
+        time.sleep(2)
         self.driver.find_element_by_xpath(self.Add_to_Cart_xpath).click()
         self.driver.execute_script("window.scrollTo(0, -400);")
         cart_button = WebDriverWait(self.driver, 10).until(lambda s: s.find_element_by_xpath(self.shoppingCart_xpath))

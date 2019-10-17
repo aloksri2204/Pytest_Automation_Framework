@@ -31,15 +31,15 @@ class Address():
         select_Country.select_by_value("133")
 
     def AddressInput(self):
-        self.driver.find_element_by_id(self.FirstName_id).send_keys(Utils.First_Name)
-        self.driver.find_element_by_id(self.LastName_id).send_keys(Utils.Last_Name)
+        self.driver.find_element_by_id(self.FirstName_id).send_keys(Utils.dict_address.get('First_Name'))
+        self.driver.find_element_by_id(self.LastName_id).send_keys(Utils.dict_address.get('Last_Name'))
         self.driver.execute_script("window.scrollTo(0, 200);")
-        self.driver.find_element_by_id(self.Email_id).send_keys(Utils.Email)
+        self.driver.find_element_by_id(self.Email_id).send_keys(Utils.dict_address.get('Guest_Email'))
         self.SelectCountry()
-        self.driver.find_element_by_id(self.City_id).send_keys(Utils.City)
-        self.driver.find_element_by_id(self.Address1_id).send_keys(Utils.Address1)
-        self.driver.find_element_by_id(self.PostCode_id).send_keys(Utils.PostCode)
-        self.driver.find_element_by_id(self.PhoneNo_id).send_keys(Utils.PhoneNo)
+        self.driver.find_element_by_id(self.City_id).send_keys(Utils.dict_address.get('City'))
+        self.driver.find_element_by_id(self.Address1_id).send_keys(Utils.dict_address.get('Address1'))
+        self.driver.find_element_by_id(self.PostCode_id).send_keys(Utils.dict_address.get('PostCode'))
+        self.driver.find_element_by_id(self.PhoneNo_id).send_keys(Utils.dict_address.get('PhoneNo'))
         self.driver.find_element_by_xpath(self.BillingAddressContinueBTN_xpath).click()
         self.driver.find_element_by_xpath(self.ShipAddressContinueBTN_xpath).click()
 

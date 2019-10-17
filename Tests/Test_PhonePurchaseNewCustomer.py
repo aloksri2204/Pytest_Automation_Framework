@@ -11,7 +11,7 @@ from Pages.AddressPage import Address
 from Pages.PaymentPage import Payment
 from Pages.OrderConfirmationPage import OrderConfirmation
 
-
+#@pytest.mark.skip(" I don't want to execute this now")
 @pytest.mark.usefixtures("test_setup")
 class Test_PhonePurchaseNewCustomer():
 
